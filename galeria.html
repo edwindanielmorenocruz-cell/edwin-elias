@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <header class="navbar-escuela">
+    <div class="logo-seccion">
+        <img src="logo_escuela.png" alt="Logo" class="logo-img">
+        <span class="siglas-escuela">EPO</span>
+    </div>
+    <nav class="menu-navegacion">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="trabajos.html" class="nav-link">Trabajos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+</header>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Antonio Díaz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Contenedor principal del CV */
+        .cv-container {
+            width: 850px;
+            background-color: #ffffff;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-height: 1000px;
+        }
+
+        /* ==========================================
+           BARRA LATERAL IZQUIERDA (Color azul oscuro)
+           ========================================== */
+        .sidebar {
+            width: 35%;
+            background-color: #0b2f52;
+            color: #ffffff;
+            padding: 40px 30px;
+        }
+
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Foto de perfil circular */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            object-fit: cover;
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3b71ca;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .sidebar-info strong {
+            color: #ffffff;
+        }
+
+        .sidebar-list {
+            list-style-type: none;
+        }
+
+        .sidebar-list li {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        /* Viñetas personalizadas para la barra lateral */
+        .sidebar-list li::before {
+            content: "•";
+            color: #3b71ca;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ==========================================
+           SECCIÓN PRINCIPAL (Derecha)
+           ========================================== */
+        .main-content {
+            width: 65%;
+            padding: 40px 40px;
+            color: #333333;
+        }
+
+        .header {
+            margin-bottom: 25px;
+            border-bottom: 3px solid #0b2f52;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            color: #0b2f52;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #3b71ca;
+            font-weight: 600;
+        }
+
+        .main-section {
+            margin-bottom: 25px;
+        }
+
+        /* Títulos de sección con la barrita azul a la izquierda */
+        .section-title {
+            font-size: 1.3rem;
+            color: #0b2f52;
+            border-left: 4px solid #3b71ca;
+            padding-left: 10px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .main-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .main-list {
+            padding-left: 20px;
+        }
+
+        .main-list li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .reference-block p {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <aside class="sidebar">
+            <div class="profile-img-container">
+                <img class="profile-img" src="perropendejo.jpg" alt="Foto de perfil">
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Datos Personales</h2>
+                <div class="sidebar-info">
+                    <p><strong>Nombre:</strong> Edwin Moreno</p>
+                    <p><strong>Correo:</strong> edwinmorenopapoi8@gmail.com</p>
+                    <p><strong>Teléfono:</strong> 56 10 29 02 92</p>
+                    <p><strong>Ciudad:</strong> Chalco, Estado de México</p>
+                    <p><strong>Edad:</strong> 17 años</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Habilidades</h2>
+                <ul class="sidebar-list">
+                    <li>HTML y CSS</li>
+                    <li>basketball</li>
+                    <li>reparar bicis</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Creatividad</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Idiomas</h2>
+                <ul class="sidebar-list">
+                    <li>Español (nativo)</li>
+                    <li>Inglés (básico)</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Edwin Moreno</h1>
+                <div class="subtitle">Estudiante de Bachillerato</div>
+            </header>
+
+            <section class="main-section">
+                <h2 class="section-title">Perfil Profesional</h2>
+                <p>Soy estudiante de bachillerato con interés en la produccion musical y la producción audiovisual. Me considero responsable, creativo y comprometido con mi formación académica.</p>
+            </section>
+
+            <section class="main-section">
+                <h2 class="section-title">Formación Académica</h2>
+                <ul class="main-list">
+                    <li>Escuela Preparatoria Oficial Anexa a la Normal de Chalco</li>
+                    <li>6° semestre</li>
+                    <li>Promedio general: 7.3</li>
+                </ul>
+            </section>
+
+            <section class="main-section">
+                <h2 class="section-title">Proyectos Escolares</h2>
+                <ul class="main-list">
+                    <li>cobro de piso en chalco</li>
+                    <li>Creación de musica regueton.</li>
+                    <li>Edición de video para un cortometraje escolar.</li>
+                </ul>
+            </section>
+
+            <section class="main-section">
+                <h2 class="section-title">Metas Profesionales</h2>
+                <p>Estudiar la carrera de ingenieria automotriz y trabajar en una empresa de coches.</p>
+            </section>
+
+            <section class="main-section">
+                <h2 class="section-title">Logros y Reconocimientos</h2>
+                <ul class="main-list">
+                    <li>quedar primer lugar en torneo de basket
+                   .</li>
+                    <li>Constancia de participación en concurso de fotografía.</li>
+                </ul>
+            </section>
+
+            <section class="main-section">
+                <h2 class="section-title">Referencias Personales</h2>
+                <div class="reference-block">
+                    <p><strong>sr.EliasLopez</strong></p>
+                    <p>estudiante de la panch</p>
+                    <p>eliaslopez@gmail.com</p>
+                </div>
+            </section>
+        </main>
+
+    </div>
+   <footer class="pie-pagina">
+        <p>MORENO CRUZ EDWIN DANIEL ELIAS LOPE CONDE --- 3° II</p>
+    </footer>
+</body>
+</html>

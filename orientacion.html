@@ -1,0 +1,605 @@
+/* --- Estilos Generales y Reseteo --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121824;
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.caja {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* --- Header y Menú de Navegación --- */
+header {
+    background-color: #1a2333;
+    border-bottom: 2px solid #00f2fe;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    filter: drop-shadow(0 0 5px #00f2fe);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover, .menu a[href="contacto.html"] {
+    color: #ffffff;
+    background-color: #00f2fe;
+    color: #121824;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* --- Cuerpo Principal (Main) --- */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed #334155;
+    padding-bottom: 10px;
+}
+
+/* Distribución en dos columnas */
+.seccion-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.izquierdo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.izquierdo p {
+    margin-bottom: 15px;
+}
+
+.derecho {
+    flex: 1;
+    background-color: #1a2333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+/* --- Formulario --- */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caja-texto {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.caja-texto:focus {
+    outline: none;
+    border-color: #00f2fe;
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+.boton {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #0072ff, #00f2fe);
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+/* --- Sección del Mapa --- */
+.mapa {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.mapa iframe {
+    display: block;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+}
+
+footer strong {
+    color: #00f2fe;
+}
+
+/* --- Adaptación para Celulares (Responsivo) --- */
+@media (max-width: 768px) {
+    .logo-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .seccion-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .menu {
+        justify-content: center;
+    }
+}
+/* Esto es lo que hace que tu menú funcione */
+.pagina {
+    display: none; /* Oculta todo por defecto */
+}
+
+.pagina.activa {
+    display: block; /* Solo muestra la activa */
+}
+
+/* Estilos extra para que se vea ordenado */
+.materia-tarjeta {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: blue;
+}
+body {
+    background-color: #0a192f; /* Azul obscuro */
+    color: #e6f1ff;           /* Texto claro */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 { text-align: center; color: #64ffda; }
+
+.galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta-imagen {
+    background-color: #172a45;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #233554;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Botón claro */
+.boton-nav {
+    display: inline-block;
+    background-color: #e6f1ff;
+    color: #0a192f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-nav:hover {
+    background-color: #64ffda;
+}
+/* Estilos globales */
+body {
+    background-color: #0a192f; /* Azul obscuro */
+    color: #e6f1ff;           /* Texto claro */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 { text-align: center; color: #ffffff; }
+
+/* Estilos de la tabla */
+.tabla-galeria {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-galeria td {
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-galeria img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #64ffda; /* Borde claro para resaltar */
+    border-radius: 8px;
+}
+
+/* Estilo del botón claro */
+.boton-nav {
+    display: inline-block;
+    background-color: #e6f1ff;
+    color: #0a192f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.boton-nav:hover {
+    background-color: #64ffda;
+}
+/* Fondo general */
+.biografia-body {
+    background-color: #0a192f;
+    color: #e6f1ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.contenedor-bio {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo de la foto */
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Esto la hace circular */
+    border: 5px solid #64ffda;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de texto */
+.tarjeta-texto {
+    background-color: #172a45;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #64ffda;
+}
+
+.seccion {
+    color: #64ffda;
+    margin-top: 0;
+}
+
+/* Botón de navegación */
+.boton-nav {
+    display: inline-block;
+    background-color: #e6f1ff;
+    color: #0a192f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.boton-nav:hover {
+    background-color: #64ffda;
+}
+
+
+/* Estilos generales para reiniciar márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* O la fuente que estés usando */
+}
+
+/* Contenedor principal del encabezado */
+.navbar-escuela {
+    background-color: #0a3d82; /* Color azul institucional */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    width: 100%;
+}
+
+/* Sección del Logo y las Siglas */
+.logo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 35px; /* Ajusta el tamaño según tu imagen */
+    width: auto;
+    display: block;
+}
+
+.siglas-escuela {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Menú de Navegación (Enlaces) */
+.menu-navegacion {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+/* Efecto visual al pasar el cursor */
+.nav-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra de Navegación Superior */
+header {
+    background-color: #803376; /* Tono morado de la imagen */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #ddd;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+/* Menú de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Botón de Menú */
+.menu-btn {
+    background-color: white;
+    color: #803376;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contenido Principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Título de Bienvenida */
+.welcome-title {
+    color: #803376;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Títulos de las otras secciones */
+.content-section h2 {
+    color: #803376;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de la Imagen */
+.image-container {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Control de secciones activas/ocultas */
+.content-section {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Pie de página */
+footer {
+    background-color: #803376;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: right;
+    padding: 5px 20px;
+    font-size: 0.75rem;
+    width: 100%;
+}
+
+/* Media Query para pantallas pequeñas (Celulares) */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 20px;
+        background-color: #803376;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
